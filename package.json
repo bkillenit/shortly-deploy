@@ -2,9 +2,6 @@
   "name": "shortly-express",
   "version": "0.0.1",
   "description": "shortly using express",
-  "engines": {
-      "node": "0.8.x"
-    },
   "main": "server.js",
   "repository": "",
   "license": "Proprietary",
