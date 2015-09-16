@@ -57,7 +57,7 @@ module.exports = function(grunt) {
       target: {
         files: [{
           expand: true,
-          cwd: 'public',
+          cwd: 'public/style',
           src: ['*.css', '!*.min.css'],
           dest: 'public/style',
           ext: '.min.css'
@@ -123,7 +123,7 @@ module.exports = function(grunt) {
   grunt.registerTask('upload', function(n) {
     if(grunt.option('prod')) {
       // add your production server task here
-      
+
     } else {
       grunt.task.run([ 'server-dev' ]);
     }
