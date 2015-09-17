@@ -28,6 +28,6 @@ var UserSch = new mongoose.Schema({
   'password': {type: String, required: true}
 });
 
-var Link = mongoose.model('User', UserSch);
+var User = mongoose.model('User', UserSch);
 
 module.exports = User;

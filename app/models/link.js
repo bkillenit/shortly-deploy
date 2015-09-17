@@ -22,7 +22,7 @@ var LinkSch = new mongoose.Schema({
   'base_url': {type: String, required: true},
   'code': {type: String},
   'title': {type: String},
-  'visits': {type: Number}
+  'visits': {type: Number, default:0}
 });
 
 var Link = mongoose.model('Link', LinkSch);
