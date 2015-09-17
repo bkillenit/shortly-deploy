@@ -22,7 +22,7 @@ mongoose.connection.on('error', function(err) {
 });
 
 
-var Url = new schema({
+var UrlS = new schema({
   'url': {type: String, required: true},
   'base_url': {type: String, required: true},
   'code': {type: String},
@@ -30,13 +30,16 @@ var Url = new schema({
   'visits': {type: Number}
 });
 
-var User = new schema({
+var UserS = new schema({
   'username': {type: String, required: true},
   'password': {type: String, required:true}
 });
 
-exports.urlMod = mongoose.model('Url', Url);
-exports.userMod = mongoose.model('User', User);
+var Url = mongoose.model('Url', UrlS);
+var User = mongoose.model('User', UserS);
+
+module.exports.Url = Url;
+module.exports.User = User;
 
 module.exports = {
   // the database url to connect
