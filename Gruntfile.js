@@ -9,8 +9,8 @@ module.exports = function(grunt) {
       },
       dist: {
         src: ['public/client/**/*.js'],
-        dest: 'public/dist/built.concat.js',
-      },
+        dest: 'public/dist/client.concat.js'
+      }
     },
 
     mochaTest: {
@@ -29,10 +29,17 @@ module.exports = function(grunt) {
     },
 
     uglify: {
-      my_target: {
-        files: {
-          'public/dist/output.min.js': ['public/dist/built.concat.js']
-        }
+      dist: {
+        files: [{
+          'public/dist/client.min.js': ['public/dist/client.concat.js']
+        },
+        {
+          expand: true,
+          cwd: "public/lib",
+          src: "**.js",
+          dest: "public/lib",
+          ext: ".min.js"
+        }]
       }
     },
 
